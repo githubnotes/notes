@@ -17,9 +17,6 @@ https://segmentfault.com/markdown
 
 
 #### Example
-
-
-#### Example
 - "First Postition of Target" [14]
 ```java
 // version 2: without jiuzhang template
