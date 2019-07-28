@@ -17,46 +17,95 @@ https://segmentfault.com/markdown
 
 
 #### Example
-- "First Postition of Target" [14]
+- "Last Postition of Target" [14]
 ```java
-// version 2: without jiuzhang template
-class Solution {
+// version 1: with jiuzhang template
+public class Solution {
     /**
-     * @param nums: The integer array.
-     * @param target: Target to find.
-     * @return: The first position of target. Position starts from 0.
+     * @param nums: An integer array sorted in ascending order
+     * @param target: An integer
+     * @return an integer
      */
-    public int binarySearch(int[] nums, int target) {
+    public int lastPosition(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return -1;
         }
         
         int start = 0, end = nums.length - 1;
-        while (start < end) {
+        while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
-                end = mid;
+                start = mid;
             } else if (nums[mid] < target) {
-                start = mid + 1;
+                start = mid;
+                // or start = mid + 1
             } else {
-                end = mid - 1;
+                end = mid;
+                // or end = mid - 1
             }
         }
         
+        if (nums[end] == target) {
+            return end;
+        }
         if (nums[start] == target) {
             return start;
         }
-        
         return -1;
+    }
+}
+
+- "find-minimum-in-rotated-sorted-array" [159]
+public class Solution {
+    /**
+     * @param nums: a rotated sorted array
+     * @return: the minimum number in the array
+     */
+    public int findMin(int[] nums) {
+        // write your code here
+        
+        if(nums == null && nums.length == 0){
+            return -1;
+        }
+        
+        int start = 0;
+        int end = nums.length -1;
+        // 
+        // need find last number to be target. int target = nums[0]; //error
+        int target = nums[nums.length -1];// <= last number
+        
+        while(start + 1 < end){
+            int mid = (start + end )/2;
+            if(nums[mid] <= target){
+                end = mid;
+            }else{
+                start = mid;// if find first number to be target, will skip the the answer.
+            }
+        }
+        
+        if(nums[start] <= target){
+            return nums[start];
+        }else{
+            return end;
+        }
     }
 }
 ```
 
 #### Questions
-[14]: https://www.lintcode.com/problem/first-position-of-target/description/ "First Postition of Target"
+[14]: https://www.lintcode.com/problem/first-position-of-target/description/ 
+[458]: https://www.lintcode.com/problem/last-position-of-target/description/ 
+[447]: https://www.lintcode.com/problem/search-in-a-big-sorted-array/description
+[159]: https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description
+[75]: https://www.lintcode.com/problem/find-peak-element/description
+[62]: https://www.lintcode.com/problem/search-in-rotated-sorted-array/description
+[141]: https://www.lintcode.com/problem/sqrtx/description
+[183]: https://www.lintcode.com/problem/wood-cut/description
+
+#####Answer
+![Q:477](./assets/p447answer.png)
 
 ## Recursion
 ![Recursion or Non-Recursion](./assets/isRecursion.png)
 #### disadvantage
 1. Statk
-
