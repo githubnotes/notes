@@ -14,3 +14,9 @@ Then they introduced common scanner throttles in ECS to me. We choosed a appropr
 Wei mergerd my pr, We reviewed the code together. We did a few minor changes.
 
 And Did minor things for TOP N buckets. Basically, I changed the configuration then builded the PR again. Somehow the test coverage beacome 74%. It was over then 75%. Maybe the pipline team is changing the alg. Anyway, will provide more unit tests.
+
+### 7/29/2019
+Last week, Wei and I completed and connected each component, did clean up.
+Sammer helped us to clean up again. I took a look at the changes after Sammer cleaned up our code.
+And For the topn changes feature, I updated the configuration for the demo. Then rebuilt the PR.
+It is interesting the unit test coverage drop to below 75% even if I didn't change any code. So I add more unit test to pass the validation.
