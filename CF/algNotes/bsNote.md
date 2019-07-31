@@ -61,18 +61,25 @@ public int function(int[] A, int target) {
     }
 ```
 
-#### Links of Questions
+#### Practice Questions 
+- first-position-of-target [14]
 [14]: https://www.lintcode.com/problem/first-position-of-target/description/
+- last-position-of-target [458]
 [458]: https://www.lintcode.com/problem/last-position-of-target/description/ 
+- search-in-a-big-sorted-array [447]
 [447]: https://www.lintcode.com/problem/search-in-a-big-sorted-array/description
+- find-minimum-in-rotated-sorted-array [159]
 [159]: https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description
+- Find peak element [75]
 [75]: https://www.lintcode.com/problem/find-peak-element/description
+- Search in rotated sorted array [62]
 [62]: https://www.lintcode.com/problem/search-in-rotated-sorted-array/description
+- sqrtx [141]
 [141]: https://www.lintcode.com/problem/sqrtx/description
+- wood-cut [183]
 [183]: https://www.lintcode.com/problem/wood-cut/description
 
-##### Practice Questions & Solutions
-
+##### Solutions
 - wood-cut [183]
 ```java
 public class Solution {

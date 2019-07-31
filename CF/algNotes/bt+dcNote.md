@@ -190,8 +190,11 @@ public ArrayList<Integer> postorderTraversal(TreeNode root) {
 }
 ```
 ### Links of Questions
+- Maximum Depth of Binary Tree [97]
 [97]: https://www.lintcode.com/problem/maximum-depth-of-binary-tree/
+- Binary Tree Paths [480]
 [480]: https://www.lintcode.com/problem/binary-tree-paths/
+- Minimum Subtree [596]
 [596]: https://www.lintcode.com/problem/minimum-subtree/description
 
 ### Practice Questions & Solutions
