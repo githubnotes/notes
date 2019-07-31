@@ -16,7 +16,7 @@ https://segmentfault.com/markdown
 3. How to move the point
 
 
-#### temple
+#### template
 ```java
 public int function(int[] A, int target) {
         //step 1:
