@@ -61,19 +61,19 @@ public int function(int[] A, int target) {
     }
 ```
 
-#### Questions 
-- From C:\Users\zhouf13\Desktop\CF\算法基础班v4.0\Week2
-- [14]: https://www.lintcode.com/problem/first-position-of-target/description/
-- [458]: https://www.lintcode.com/problem/last-position-of-target/description/ 
-- [447]: https://www.lintcode.com/problem/search-in-a-big-sorted-array/description
-- [159]: https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description
-- [75]: https://www.lintcode.com/problem/find-peak-element/description
-- [62]: https://www.lintcode.com/problem/search-in-rotated-sorted-array/description
-- [141]: https://www.lintcode.com/problem/sqrtx/description
-- [183]: https://www.lintcode.com/problem/wood-cut/description
+#### Links of Questions
+[14]: https://www.lintcode.com/problem/first-position-of-target/description/
+[458]: https://www.lintcode.com/problem/last-position-of-target/description/ 
+[447]: https://www.lintcode.com/problem/search-in-a-big-sorted-array/description
+[159]: https://www.lintcode.com/problem/find-minimum-in-rotated-sorted-array/description
+[75]: https://www.lintcode.com/problem/find-peak-element/description
+[62]: https://www.lintcode.com/problem/search-in-rotated-sorted-array/description
+[141]: https://www.lintcode.com/problem/sqrtx/description
+[183]: https://www.lintcode.com/problem/wood-cut/description
 
-##### Answer
-- 183 wood-cut
+##### Practice Questions & Solutions
+
+- wood-cut [183]
 ```java
 public class Solution {
     /**
@@ -133,7 +133,7 @@ public class Solution {
 }
 ```
 
-- 141 sqrtx
+- sqrtx [141]
 ```java
 public class Solution {
     /**
@@ -185,7 +185,7 @@ public class Solution {
 }
 ```
 
-- search in rotated sorted array
+- search in rotated sorted array [447]
 ```java
 public class Solution {
     /**
@@ -237,7 +237,7 @@ public class Solution {
     }
 }
 ```
--  last position of target [458]
+- last position of target [458]
 ```java
 // version 1: with jiuzhang template
 public class Solution {

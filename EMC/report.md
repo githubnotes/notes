@@ -25,6 +25,10 @@ It is interesting the unit test coverage drop to below 75% even if I didn't chan
 Made a optimization, made the montor and task scanner sepelty, and Monsly I was debuging. 
 Basicly, made current code can pass old MeteringVTFs.
 
+7/31
+Don't have too much update. In the next couple of days, will do debug mostly.
+
+
 Stand UP: https://Dell.zoom.us/j/5522588246
 
 15621
