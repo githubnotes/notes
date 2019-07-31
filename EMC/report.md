@@ -20,3 +20,11 @@ Last week, Wei and I completed and connected each component.
 Sammer helped us to clean up the changes. I took a look at the changes. Started to test.
 And For the topn changes feature, I updated the configuration for the demo. Then rebuilt the PR.
 It is interesting the unit test coverage drop to below 75% even if I didn't change any code. So I added more unit test to pass the validation.
+
+7/30
+Made a optimization, made the montor and task scanner sepelty, and Monsly I was debuging. 
+Basicly, made current code can pass old MeteringVTFs.
+
+Stand UP: https://Dell.zoom.us/j/5522588246
+
+15621

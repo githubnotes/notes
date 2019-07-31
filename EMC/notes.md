@@ -157,9 +157,7 @@ curl -G 'http://10.243.6.138:8086/query?pretty=true' --data-urlencode "db=monito
 
 
 
-shift + g   end of the file, gg to first
-? last from end of the file
-ctrl + b
+
 ./cf_client --user root --password ChangeMe --list --name com.emc.ecs.metering.monitoring.publisher.bucket.topn
 
 ./cf_client --user emcservice --password ChangeMe --set --name com.emc.ecs.metering.monitoring.publisher.bucket.topn --value 10 --reason test
@@ -208,3 +206,13 @@ I have followed the external monitoring wiki to set up enternal monitoring. All 
 ### VTF
 ./gradlew runtime:copyConfs
 -Dvtf.devel=true
+
+### vim
+shift + g   end of the file, gg to first
+? last from end of the file
+ctrl + b
+N next, shift N
+
+### idea
+F7 go to inside
+F8 next 
