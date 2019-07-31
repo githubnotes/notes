@@ -1,19 +1,19 @@
 # Binary Tree & Divide Conquer
 
 ## Time Complexity
-In O(n) time, make n to be two n/2. What is time complexity? 
-    T(n) = O(n) + 2 T(n/2)
-         = O(n) + 2 ( O(n/2) + 2 T(n/4)) = 2 O(n) + 4 T(n/4)) = 3 O(n) + 8 T(n/ 8))
-         = ...
-         = 4 O(n) + 16 T(n/ 16))
-         = O(n log n) +  n O(1) 
+In O(n) time, make n to be two n/2. What is time complexity? \
+    T(n) = O(n) + 2 T(n/2)\
+         = O(n) + 2 ( O(n/2) + 2 T(n/4))\ = 2 O(n) + 4 T(n/4)) = 3 O(n) + 8 T(n/ 8))\
+         = ...\
+         = 4 O(n) + 16 T(n/ 16))\
+         = O(n log n) +  n O(1) \
          = O(n log n)
 
-In O(1) time, make n to be n/2. What is time complexity? 
- T(n) = O(1) + 2 T(n/2)
-         = O(1) + 2 ( O(n/2) + 2 T(n/4)) = 2 O(1) + 4 T(n/4)) = 3 O(1) + 8 T(n/ 8))
-         = ...
-         = O(log n) +  n O(1) 
+In O(1) time, make n to be n/2. What is time complexity? \
+ T(n) = O(1) + 2 T(n/2)\
+         = O(1) + 2 ( O(n/2) + 2 T(n/4)) = 2 O(1) + 4 T(n/4)) = 3 O(1) + 8 T(n/ 8))\
+         = ...\
+         = O(log n) +  n O(1) \
          = O(n)
 
 ## Traverse in Binary Tree
@@ -194,12 +194,10 @@ public ArrayList<Integer> postorderTraversal(TreeNode root) {
 [480]: https://www.lintcode.com/problem/binary-tree-paths/
 [596]: https://www.lintcode.com/problem/minimum-subtree/description
 
-
 ### Practice Questions & Solutions
 - Maximum Depth of Binary Tree [97]
 - Binary Tree Paths [480]
 - Minimum Subtree [596]
-
 
 ## DFS in Binary Tree
 ### Preorder /Inorder /Postorder
