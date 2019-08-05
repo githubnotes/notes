@@ -329,6 +329,133 @@ public class Solution {
         return resule;
     }  
 }
+
+
+
+/*
+                    1 
+                /       \ 
+               2          3 
+                \        
+                  5    
+Left:
+    root -> left -> [right -> path add 5]
+    root -> [left -> root.ley(2) + rightPaths(5)]
+    root.key +  [left -> root.ley(2) + rightPaths(5)]
+
+
+    root -> binaryTreePaths(left) 2
+             -> binaryTreePaths(right) 
+                ->paths add 5
+
+    root -> binaryTreePaths(left) 2
+             -> binaryTreePaths(right) 
+                ->return paths(5) 
+    
+   root -> binaryTreePaths(left) 2
+             -> 2 + paths (5)  
+
+    1 +  2 + paths (5) = 1->2> 5
+
+Right:
+    root -> [right -> path add 3]
+    root.key +  [right -> path add 3]
+*/
+
+ public static  List<String> binaryTreePaths(Node root) {
+        List<String> paths = new ArrayList<>();
+        if (root == null) {
+            return paths;
+        }
+
+        List<String> leftPaths = binaryTreePaths(root.left);
+        List<String> rightPaths = binaryTreePaths(root.right);
+        for (String path : leftPaths) {
+            paths.add(root.key + "->" + path);
+            System.out.println( "left " +  (root.key));
+        }
+        for (String path : rightPaths) {
+            paths.add(root.key + "->" + path);
+            System.out.println( "right " +  (root.key));
+        }
+
+        // root is a leaf
+        if (paths.size() == 0) {
+            paths.add("" + root.key);
+            //System.out.println( "leaf " +  (root.key));
+        }
+
+        return paths;
+    }
+
+
+
+/******************************
+- Balanced-binary-tree [93]
+******************************/
+
+//Version 1: with ResultType
+class ResultType {
+    public boolean isBalanced;
+    public int maxDepth;
+    public ResultType(boolean isBalanced, int maxDepth) {
+        this.isBalanced = isBalanced;
+        this.maxDepth = maxDepth;
+    }
+}
+
+public class Solution {
+    /**
+     * @param root: The root of binary tree.
+     * @return: True if this Binary tree is Balanced, or false.
+     */
+    public boolean isBalanced(TreeNode root) {
+        return helper(root).isBalanced;
+    }
+    
+    private ResultType helper(TreeNode root) {
+        if (root == null) {
+            return new ResultType(true, 0);
+        }
+        
+        ResultType left = helper(root.left);
+        ResultType right = helper(root.right);
+        
+        // subtree not balance
+        if (!left.isBalanced || !right.isBalanced) {
+            return new ResultType(false, -1);
+        }
+        
+        // root not balance
+        if (Math.abs(left.maxDepth - right.maxDepth) > 1) {
+            return new ResultType(false, -1);
+        }
+        
+        return new ResultType(true, Math.max(left.maxDepth, right.maxDepth) + 1);
+    }
+}
+
+
+// Version 2: without ResultType
+public class Solution {
+    public boolean isBalanced(TreeNode root) {
+        return maxDepth(root) != -1;
+    }
+
+    private int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        if (left == -1 || right == -1 || Math.abs(left-right) > 1) {
+            return -1;
+        }
+        return Math.max(left, right) + 1;
+    }
+}
+
 ```
 ### Links of Questions
 - Maximum Depth of Binary Tree [97]
@@ -337,6 +464,8 @@ public class Solution {
 [480]: https://www.lintcode.com/problem/binary-tree-paths/
 - Minimum Subtree [596]
 [596]: https://www.lintcode.com/problem/minimum-subtree/description
+- Balanced-binary-tree [93]
+https://www.lintcode.com/problem/balanced-binary-tree/description
 - binary-tree-level-order-traversal [69]
 [69]: https://www.lintcode.com/problem/binary-tree-level-order-traversal/description
 - binary-tree-level-order-traversal II [70]
