@@ -357,6 +357,11 @@ Left:
 
     1 +  2 + paths (5) = 1->2> 5
 
+    right 2 path 5
+    left 1 path 2->5
+    right 1 path 3
+    1->2->5, 1->3]
+
 Right:
     root -> [right -> path add 3]
     root.key +  [right -> path add 3]
@@ -466,10 +471,25 @@ public class Solution {
 [596]: https://www.lintcode.com/problem/minimum-subtree/description
 - Balanced-binary-tree [93]
 https://www.lintcode.com/problem/balanced-binary-tree/description
-- binary-tree-level-order-traversal [69]
+binary-tree-level-order-traversal [69]
 [69]: https://www.lintcode.com/problem/binary-tree-level-order-traversal/description
-- binary-tree-level-order-traversal II [70]
+binary-tree-level-order-traversal II [70]
 https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description
+- Binary Tree Maximum Node [632]
+https://www.lintcode.com/problem/binary-tree-maximum-node/
+-  Subtree with Maximum Average [597]
+https://www.lintcode.com/problem/subtree-with-maximum-average/description
+-  Flatten Binary Tree to Linked List [597]
+https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/
+- Lowest Common Ancestor of a Binary Tree [88]
+https://www.lintcode.com/problem/lowest-common-ancestor/
+- Binary Tree Longest Consecutive Sequence [595]
+https://www.lintcode.com/problem/binary-tree-longest-consecutive-sequence/
+- Binary Tree Path Sum I/II/III
+https://www.lintcode.com/problem/binary-tree-path-sum/
+https://www.lintcode.com/problem/binary-tree-path-sum-ii/
+https://www.lintcode.com/problem/binary-tree-path-sum-iii/
+
 
 ### Practice Questions & Solutions
 - Maximum Depth of Binary Tree [97]
