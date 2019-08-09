@@ -461,6 +461,163 @@ public class Solution {
     }
 }
 
+/*******************************
+subtree-with-maximum-average
+*******************************/
+// version 1: Traverse + Divide Conquer
+public class Solution {
+    private class ResultType {
+        public int sum, size;
+        public ResultType(int sum, int size) {
+            this.sum = sum;
+            this.size = size;
+        }
+    }
+    
+    private TreeNode subtree = null;
+    private ResultType subtreeResult = null;
+    
+    /**
+     * @param root the root of binary tree
+     * @return the root of the maximum average of subtree
+     */
+    public TreeNode findSubtree2(TreeNode root) {
+        helper(root);
+        return subtree;
+    }
+    
+    private ResultType helper(TreeNode root) {
+
+        if (root == null) {
+            return new ResultType(0, 0);
+        }
+        // 分治法计算左右子树的平均值
+        ResultType left = helper(root.left);
+        ResultType right = helper(root.right);
+
+        // 当前subtree的结果是左右两颗子树的和的平均值加上自身
+        ResultType result = new ResultType(
+            left.sum + right.sum + root.val,
+            left.size + right.size + 1
+        );
+        // 打擂台比较得到最大平均值的子树
+        if (subtree == null ||
+            subtreeResult.sum * result.size < result.sum * subtreeResult.size
+        ) {
+            subtree = root;
+            subtreeResult = result;
+        }
+        return result;
+    }
+}
+
+/*******************************
+Flatten Binary Tree to Linked List
+*******************************/
+// Version 1: Traverse
+public class Solution {
+    private TreeNode lastNode = null;
+
+    public void flatten(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        if (lastNode != null) {
+            lastNode.left = null;
+            lastNode.right = root;
+        }
+
+        lastNode = root;
+        TreeNode right = root.right;
+        flatten(root.left);
+        flatten(right);
+    }
+}
+
+// version 2: Divide & Conquer
+public class Solution {
+    /**
+     * @param root: a TreeNode, the root of the binary tree
+     * @return: nothing
+     */
+    public void flatten(TreeNode root) {
+        helper(root);
+    }
+    
+    // flatten root and return the last node
+    private TreeNode helper(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        
+        TreeNode leftLast = helper(root.left);
+        TreeNode rightLast = helper(root.right);
+        
+        // connect leftLast to root.right
+        if (leftLast != null) {
+            leftLast.right = root.right;
+            root.right = root.left;
+            root.left = null;
+        }
+        
+        if (rightLast != null) {
+            return rightLast;
+        }
+        
+        if (leftLast != null) {
+            return leftLast;
+        }
+        
+        return root;
+    }
+}
+
+// version 3: Non-Recursion
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param root: a TreeNode, the root of the binary tree
+     * @return: nothing
+     */
+    public void flatten(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        
+        while (!stack.empty()) {
+            TreeNode node = stack.pop();
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+            
+            // connect 
+            node.left = null;
+            if (stack.empty()) {
+                node.right = null;
+            } else {
+                node.right = stack.peek();
+            }
+        }
+    }
+}
+
 ```
 ### Links of Questions
 - Maximum Depth of Binary Tree [97]
