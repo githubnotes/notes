@@ -19,6 +19,35 @@ In O(1) time, make n to be n/2. What is time complexity? \
 ## Traverse in Binary Tree
 ![Traverse in Binary Tree](./assets/traverseBinalyTree.png)
 
+
+- Maximum Depth of Binary Tree [97]
+- Binary Tree Paths [480]    (1 more)  
+- Minimum Subtree [596]   (1 more)  
+- Balanced-binary-tree [93] (1 more)  
+- binary-tree-level-order-traversal [69] (todo)
+- binary-tree-level-order-traversal II [70] (todo)
+- Binary Tree Maximum Node [632]
+- Subtree with Maximum Average [597]
+- Flatten Binary Tree to Linked List [597]
+- Lowest Common Ancestor of a Binary Tree [88]
+- Lowest Common Ancestor of a Binary Tree II (todo)
+- Lowest Common Ancestor of a Binary Tree III (todo)
+- Binary Tree Longest Consecutive Sequence [595]
+- Binary Tree Longest Consecutive Sequence II  (todo)
+- Binary Tree Longest Consecutive Sequence III  (todo)
+- Binary Tree Path Sum I
+- Binary Tree Path Sum II  (todo)
+- Binary Tree Path Sum III (todo)
+
+
+## DFS in Binary Tree
+### Preorder /Inorder /Postorder
+### Introduce Divide Conquer Alg
+### Non-Recusion VS Traverse VS Divide Conquer
+### Binary Search Tree
+#### Insert/Remove/Find/Validate
+
+
 ### Preorder  Root L R 
 https://www.lintcode.com/problem/binary-tree-preorder-traversal/
 
@@ -617,47 +646,4 @@ public class Solution {
         }
     }
 }
-
 ```
-### Links of Questions
-- Maximum Depth of Binary Tree [97]
-[97]: https://www.lintcode.com/problem/maximum-depth-of-binary-tree/
-- Binary Tree Paths [480]
-[480]: https://www.lintcode.com/problem/binary-tree-paths/
-- Minimum Subtree [596]
-[596]: https://www.lintcode.com/problem/minimum-subtree/description
-- Balanced-binary-tree [93]
-https://www.lintcode.com/problem/balanced-binary-tree/description
-binary-tree-level-order-traversal [69]
-[69]: https://www.lintcode.com/problem/binary-tree-level-order-traversal/description
-binary-tree-level-order-traversal II [70]
-https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description
-- Binary Tree Maximum Node [632]
-https://www.lintcode.com/problem/binary-tree-maximum-node/
--  Subtree with Maximum Average [597]
-https://www.lintcode.com/problem/subtree-with-maximum-average/description
--  Flatten Binary Tree to Linked List [597]
-https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/
-- Lowest Common Ancestor of a Binary Tree [88]
-https://www.lintcode.com/problem/lowest-common-ancestor/
-- Binary Tree Longest Consecutive Sequence [595]
-https://www.lintcode.com/problem/binary-tree-longest-consecutive-sequence/
-- Binary Tree Path Sum I/II/III
-https://www.lintcode.com/problem/binary-tree-path-sum/
-https://www.lintcode.com/problem/binary-tree-path-sum-ii/
-https://www.lintcode.com/problem/binary-tree-path-sum-iii/
-
-
-### Practice Questions & Solutions
-- Maximum Depth of Binary Tree [97]
-- Binary Tree Paths [480]
-- Minimum Subtree [596]
-- binary-tree-level-order-traversal [69]
-- binary-tree-level-order-traversal II [70]
-
-## DFS in Binary Tree
-### Preorder /Inorder /Postorder
-### Introduce Divide Conquer Alg
-### Non-Recusion VS Traverse VS Divide Conquer
-### Binary Search Tree
-#### Insert/Remove/Find/Validate

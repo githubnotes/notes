@@ -23,3 +23,8 @@ In the next couple of days
 - A suggest. If you could ask us project details randomly, (NO periodically), probability can make our work more efficient.
 
 - Maybe inters need more help from S
+
+
+
+Hi, I am Fan Zhou graduated from WSU. have been in EMC for the past almost 1 year, have been working on a number of new features in the metering service in Java. I have been working on embedded system in C for two years in China. 
+Hopefully my experience can help our team in future.
