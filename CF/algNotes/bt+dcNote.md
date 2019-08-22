@@ -142,41 +142,60 @@ public class Solution {
 ### Inorder  L Root R
 https://www.lintcode.com/en/problem/binary-tree-inorder-traversal/
 
+
 ```java
 public class Solution {
     /**
+    1) Create an empty stack S.
+    2) Initialize current node as root
+    3) Push the current node to S and set current = current->left until current is NULL
+    4) If current is NULL and stack is not empty then 
+        a) Pop the top item from stack.
+        b) Print the popped item, set current = popped_item->right 
+        c) Go to step 3.
+    5) If current is NULL and stack is empty then we are done.
      * @param root: The root of binary tree.
      * @return: Inorder in ArrayList which contains node values.
      */
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
-        ArrayList<Integer> result = new ArrayList<>();
-        
-        while (root != null) {
-            stack.push(root);
-            root = root.left;
-        }
+
+     
+    /* Class to print the inorder traversal */
+class BinaryTree 
+{ 
+    Node root; 
+    void inorder() 
+    { 
+        if (root == null) 
+            return; 
     
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.peek();
-            result.add(node.val);
-            
-            if (node.right == null) {
-                node = stack.pop();
-                while (!stack.isEmpty() && stack.peek().right == node) {
-                    node = stack.pop();
-                }
-            } else {
-                node = node.right;
-                while (node != null) {
-                    stack.push(node);
-                    node = node.left;
-                }
-            }
-        }
-        return result;
-    }
-}
+        Stack<Node> s = new Stack<Node>(); 
+        Node curr = root; 
+  
+        // traverse the tree 
+        while (curr != null || s.size() > 0) 
+        { 
+            /* Reach the left most Node of the 
+            curr Node */
+            while (curr !=  null) 
+            { 
+                /* place pointer to a tree node on 
+                   the stack before traversing 
+                  the node's left subtree */
+                s.push(curr); 
+                curr = curr.left; 
+            } 
+  
+            /* Current must be NULL at this point */
+            curr = s.pop(); 
+  
+            System.out.print(curr.data + " "); 
+  
+            /* we have visited the node and its 
+               left subtree.  Now, it's right 
+               subtree's turn */
+            curr = curr.right; 
+        } 
+    } 
 ```
 ### Postorder  L R ROOT
 https://www.lintcode.com/problem/binary-tree-postorder-traversal/
@@ -542,9 +561,7 @@ public class Solution {
             left.size + right.size + 1
         );
         // 打擂台比较得到最大平均值的子树
-        if (subtree == null ||
-            subtreeResult.sum * result.size < result.sum * subtreeResult.size
-        ) {
+        if (subtree == null ||subtreeResult.sum * result.size < result.sum * subtreeResult.size) {
             subtree = root;
             subtreeResult = result;
         }
