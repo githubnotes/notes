@@ -40,12 +40,24 @@ In O(1) time, make n to be n/2. What is time complexity? \
 - Binary Tree Path Sum III (todo)
 
 
-## DFS in Binary Tree
-### Preorder /Inorder /Postorder
-### Introduce Divide Conquer Alg
-### Non-Recusion VS Traverse VS Divide Conquer
+
 ### Binary Search Tree
-#### Insert/Remove/Find/Validate
+#### Insert/Remove/Find/Validate O(h)
+![Binary Search Tree](./assets/bst1.png)
+
+BST defination: 
+    -  left < root, right >= root
+    - in-order traversal: never decrease,but never decrease hasn't to be BST
+
+
+- Validate Binary Search Tree [95]
+- 
+- convert-binary-search-tree-to-doubly-linked-list
+https://www.jiuzhang.com/solution/convert-binary-search-tree-to-doubly-linked-list/
+
+
+
+
 
 
 ### Preorder  Root L R 
