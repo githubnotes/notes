@@ -21,5 +21,41 @@
 - Binary Tree Zigzag Order Traversal
 - Convert Binary Tree to Linked Lists by Depth
 
-STOP: 00:47
+## BFS in Graph (Undirected)
+- Graph Valid Tree
+     - initializeGraph
+        - Input: n = 5 edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
+        - Map<Integer, Set<Integer>>
+        - Map<0, [1,2,3]>
+        - Map<1, [0,4]>
+        - Map<2, [0]>
+        - Map<3, [0]>
+        - Map<4, [1]>
+    - validTree
+        - points == edges + 1
+        - find all neigbor == points (graph is connected)
+    ``` java 
+        Map<Integer, Set<Integer>> graph = initializeGraph(n, edges)
+        Queue<Integer> myQ = new LinkedList<>();
+        Set<Integer> hash = new HashSet<>();
+    ```
+        
+- Clone graph
+    - find all nodes
+    - mapping old node to new node
+    - conncet all edges (copy neighbors)
 
+## Topological Sorting (Directed)
+- Topological Sorting
+    - collect in-degree
+    - put all nodes that indgree = i into queue
+    - bfs
+- Course Schedule I && II (to-do)
+- Sequence Reconstruction (to-do)
+
+## BFS in Matrix 
+![Matrix](./assets/m.png)
+
+- Number of Islands (to-do)
+- Knight Shortest Path (to-do)
+- Build Post Office II (to-do)
