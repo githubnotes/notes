@@ -17,10 +17,14 @@
 - https://www.lintcode.com/problem/partition-array-by-odd-and-even/
 - https://www.lintcode.com/problem/interleaving-positive-and-negative-numbers/
 - https://www.lintcode.com/problem/sort-letters-by-case/description
+- color sort
+    - if is 0. move to left, if is 1 skip, if is 2 move to  right
+- https://www.lintcode.com/problem/sort-colors-ii/description
 
 ## 分成三部分
 ## others sorts
-
+ 
 
 #  Two Sum
     - Two sum
+    - Two Sum II - Input array is sorted
