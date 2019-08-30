@@ -34,6 +34,11 @@ Binary Search
 [75]: https://www.lintcode.com/problem/find-peak-element/description
 - Search in rotated sorted array [62]
 [62]: https://www.lintcode.com/problem/search-in-rotated-sorted-array/description
+  - 456123, find 0-
+  - 456712, find 0
+  - 456123, find 7
+  - 456712, find 7
+
 - sqrtx [141]
 [141]: https://www.lintcode.com/problem/sqrtx/description
 - wood-cut [183]
