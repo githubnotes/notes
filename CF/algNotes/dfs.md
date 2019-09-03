@@ -15,20 +15,29 @@
 - Combination Sum
     - remove depulcation
     - sort
+- Combination Sum II
 - Palindrome Partitioning
+
+
+   
+## Permutation
+    - 问题模型：求出所有满足条件的“排列”。
+    - 判断条件：组合中的元素是顺序“相关”的。
+    - 时间复杂度：与 n! 相关。
+
 - Permutations
     - if(temp.contains(nums[i])){
             continue;
         }
 - Permutations II
+- N Queens
 
-   
-## Permutation
-- 问题模型：求出所有满足条件的“排列”。
-- 判断条件：组合中的元素是顺序“相关”的。
-- 时间复杂度：与 n! 相关。
-
-## Graph
+## Search in a Graph
     - Word Ladder
-## Non-Recursion
+    - Word Ladder II
+## Stack Non-Recursion
+    - Expression Expand
+    - Implement Queue by Two Stacks
+    - 
 ## Iterator
+    - Flatten Nested List Iterator

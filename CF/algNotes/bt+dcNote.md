@@ -1,4 +1,15 @@
 # Binary Tree & Divide Conquer
+- 时间复杂度训练 II
+- 二叉树的遍历算法 Traverse in Binary Tree
+    - Preorder / Inorder / Postorder
+
+- 二叉树的深度优先搜索 DFS in Binary Tree
+    - 遍历问题 Preorder / Inorder / Postorder
+    - 分治算法 Introduce Divide Conquer Algorithm
+    - 非递归 遍历法 分治法 Non-recursion vs Traverse vs Divide Conquer
+    - 二叉搜索树 Binary Search Tree
+        - Insert / Remove / Find / Validate
+
 
 ## Time Complexity
 In O(n) time, make n to be two n/2. What is time complexity? \
@@ -18,27 +29,23 @@ In O(1) time, make n to be n/2. What is time complexity? \
 
 ## Traverse in Binary Tree
 ![Traverse in Binary Tree](./assets/traverseBinalyTree.png)
-
-
 - Maximum Depth of Binary Tree [97]
-- Binary Tree Paths [480]    (1 more)  
-- Minimum Subtree [596]   (1 more)  
-- Balanced-binary-tree [93] (1 more)  
+- Binary Tree Paths [480]   
+- Minimum Subtree [596]  
+- Balanced-binary-tree [93] 
 - binary-tree-level-order-traversal [69] (todo)
 - binary-tree-level-order-traversal II [70] (todo)
 - Binary Tree Maximum Node [632]
-- Subtree with Maximum Average [597]
-- Flatten Binary Tree to Linked List [597]
-- Lowest Common Ancestor of a Binary Tree [88]
-- Lowest Common Ancestor of a Binary Tree II (todo)
-- Lowest Common Ancestor of a Binary Tree III (todo)
+- Subtree with Maximum Average [597] (1 more)
+- Flatten Binary Tree to Linked List [597] (1 more)
+- Lowest Common Ancestor of a Binary Tree [88] (1 more)
 - Binary Tree Longest Consecutive Sequence [595]
 - Binary Tree Longest Consecutive Sequence II  (todo)
 - Binary Tree Longest Consecutive Sequence III  (todo)
-- Binary Tree Path Sum I
+- Binary Tree Path Sum I (1 more)
 - Binary Tree Path Sum II  (todo)
 - Binary Tree Path Sum III (todo)
-
+- Validate Binary Search Tree
 
 
 ### Binary Search Tree
