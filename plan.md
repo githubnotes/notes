@@ -1,0 +1,24 @@
+- cf
+    - binary search +1
+    - Binary tree & Divid C +1
+    - dfs +1
+    - bfs
+    - dp
+    - two pointers
+    - data structrue
+    - linkedlistArray
+
+- ood
+- java
+- system design
+- cloud
+
+- 9/4/2019
+    - binary search +1
+    - Binary tree & Divid C +1
+    - dfs +1
+    - bfs
+    - dp
+    - two pointers
+    - data structrue
+    - linkedlistArray

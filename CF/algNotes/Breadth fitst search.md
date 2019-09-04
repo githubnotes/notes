@@ -15,8 +15,8 @@
 
 ## BFS in Binary Tree
 - Binary Tree Level Order Traversal
-- https://www.lintcode.com/help/binary-tree-representation/
-- Serialize and Deserialize Binary Tree
+- Serialize and Deserialize Binary Tree (1 more)
+     - https://www.lintcode.com/help/binary-tree-representation/
 - Binary Tree Level Order Traversal II
 - Binary Tree Zigzag Order Traversal
 - Convert Binary Tree to Linked Lists by Depth
