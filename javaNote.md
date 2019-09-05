@@ -1,3 +1,5 @@
+https://1o24bbs.com/t/topic/11603?from=singlemessage&isappinstalled=0
+
 Most Popular Java Interview Questions
 Given below is a comprehensive list of most important and commonly asked basic and advanced Java programming interview questions with detailed answers.
 

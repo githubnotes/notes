@@ -59,3 +59,44 @@
 - Number of Islands (to-do)
 - Knight Shortest Path (to-do)
 - Build Post Office II (to-do)
+
+
+```java
+public class Solution {
+    /**
+     * @param root: the root of the given tree
+     * @return: the values of the nodes you can see ordered from top to bottom
+     */
+   
+  
+    public List<Integer> rightSideView(TreeNode root) {
+        // write your code here
+   List<Integer> res = ArrayList<>();
+        Queue <TreeNode> myQ = LinkedList<>();
+       
+        if(root == null){
+            return myQ;
+        }
+        
+        myQ.offer(root);
+        return helper();
+
+    }
+
+    public List<Integer> helper(){
+          List<Integer> res = ArrayList<>();
+        while(!myQ.isEmpty){
+            int size = myQ.size();
+
+            for(int i = 0; i < size; i++){
+                TreeNode node = myQ.poll();
+                res.add(node.val);
+                if(node.right != null){
+                      myQ.add(node.right);  
+                }
+            }
+        }
+        return res;
+    }
+}
+```

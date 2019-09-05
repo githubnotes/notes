@@ -51,3 +51,7 @@ I have been reading the wiki from isilone such as one file system, and reviewing
 All,
  
 I am really looking forward to getting the opportunity to work with each of you and have you join our team.  I was hoping to have the opportunity to get you all together this week to give a brief introduction to my current team.  Unfortunately timing didn’t quite work out due to training and a folks out on PTO.  Because I will be out in training for 2.5 days next week, I will be setting up 1:1s for each of you mid to late next week.  Additionally, I will take the opportunity to have a sync up with your manager to ensure there is a clear transition plan/hand-off between us in completing current team commitments/deliverables.  In preparation for our 1:1 discussion next week, I’d like you to think about the following questions to gather your thoughts on what you’d like me to know about you:
+
+
+time to start debug
+H1B myADP
