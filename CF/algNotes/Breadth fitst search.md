@@ -47,8 +47,8 @@
 
 ## Topological Sorting (Directed)
 - Topological Sorting
-    - collect in-degree
-    - put all nodes that indgree = i into queue
+    - collect in-degree 找到所有的 indegree
+    - put all nodes that indgree == 0 into queue
     - bfs
 - Course Schedule I && II (to-do)
 - Sequence Reconstruction (to-do)
@@ -56,7 +56,7 @@
 ## BFS in Matrix 
 ![Matrix](./assets/m.png)
 
-- Number of Islands (to-do)
+- Number of Islands (1 more)
 - Knight Shortest Path (to-do)
 - Build Post Office II (to-do)
 
