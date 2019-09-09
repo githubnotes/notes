@@ -24,7 +24,6 @@
 ## 分成三部分
 ## others sorts
  
-
 #  Two Sum
     - Two sum
     - Two Sum II - Input array is sorted

@@ -3,29 +3,16 @@
 ## High Frequency
 
 - Reverse linked list
-- Reverse Nodes in k-Group
-    - reverse function 
-        - Need: preN,startN, endN, endNextN
-        - if endN == null return null
-        - return startN (next round start.pre)
-    - first round:
-        - head -> n1 -> n2-> n3 -> n4-> null,  k = 2;
-        - preN =  head ,startN = n1, endN = n2, endNextN = n3, reutrn n1
-    - second round:
-        - head -> n2 -> n1 -> n3 -> n4-> null,  k = 2;
-        - preN =  n1 ,startN = n3, endN = n4, endNextN = null.
+- Reverse Nodes in k-Group (1 more) (1 more) P0
 - Partition List
 - http://www.lintcode.com/en/problem/merge-two-sorted-lists/
 - http://www.lintcode.com/en/problem/reverse-linked-list-ii/
 - http://www.lintcode.com/en/problem/swap-two-nodes-in-linked-list/
 - http://www.lintcode.com/en/problem/reorder-list/
 - http://www.lintcode.com/en/problem/rotate-list/
-- Copy List with Random Pointer
+- Copy List with Random Pointer (1 more) P0
 - Listed List cycle
 - http://www.lintcode.com/problem/convert-sorted-list-to-balanced-bst/
-- http://www.lintcode.com/problem/delete-node-in-the-middle-of-singly-linked-list/
-- http://www.lintcode.com/problem/convert-binary-search-tree-to-doubly-linked-list/
-
 
 
 # Array
