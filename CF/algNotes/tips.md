@@ -1,4 +1,8 @@
 ``` java 
+Character.isLetter(c) || Character.isDigit(c);
+Character.toLowerCase(s.charAt(front)
+Character.isUpperCase(chars[j])
+
 String subString = s.substring(start, i + 1);
 subString.append("#");
 
