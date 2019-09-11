@@ -78,12 +78,3 @@ Thanks,
 
 
 Administrative Processing
-
-
-
-inet 192.168.32.162  netmask 255.255.255.0  broadcast 192.168.32.255
-        inet6 fe80::8fd1:66b8:8007:64db  prefixlen 64  scopeid 0x20<link>
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-fan@ubuntu:~/workspace$ ifconfig | grep -i ether
-        ether 00:0c:29:73:c7:50  txqueuelen 1000  (Ethernet)
