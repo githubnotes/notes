@@ -53,5 +53,37 @@ All,
 I am really looking forward to getting the opportunity to work with each of you and have you join our team.  I was hoping to have the opportunity to get you all together this week to give a brief introduction to my current team.  Unfortunately timing didn’t quite work out due to training and a folks out on PTO.  Because I will be out in training for 2.5 days next week, I will be setting up 1:1s for each of you mid to late next week.  Additionally, I will take the opportunity to have a sync up with your manager to ensure there is a clear transition plan/hand-off between us in completing current team commitments/deliverables.  In preparation for our 1:1 discussion next week, I’d like you to think about the following questions to gather your thoughts on what you’d like me to know about you:
 
 
-time to start debug
-H1B myADP
+We can certainly provide you with visa instructions, but first, we would like to confirm certain details. Please provide the following information so that we can evaluate your specific situation, and provide you with the most accurate instructions. 
+
+- Provide the Consulate you will visit: 
+  - Shanghai China
+- Date of departure and duration of stay:
+  - Departure from USA: 10/6/2019  Come back to USA: 10/25/2019 (If I can get my VISA stamp successfully)
+- Your official job title, and worksite:
+  - Software Development Engineer II.  Seattle 
+- Current job duties:
+  - I have bean reorganized to another team which is working on file access protocol of isilon few weeks ago.
+- Manager’s name & email address:
+  - Leslie Nguyen   Leslie.Nguyen@dell.com
+- Manager’s job title:
+  - Manager 2, Software Engineering
+- Copy of your most recent pay statement:
+  - Please find my pay statement of attachment.
+- Copy of your most recent passport, visa, and approval notice:
+  - Please find mymost recent passport, visa, and approval notice of attachment.
+
+Also, has there been any significant change to your job description, functions, or location since the filing of your last petition?
+
+Thanks,
+
+
+Administrative Processing
+
+
+
+inet 192.168.32.162  netmask 255.255.255.0  broadcast 192.168.32.255
+        inet6 fe80::8fd1:66b8:8007:64db  prefixlen 64  scopeid 0x20<link>
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+fan@ubuntu:~/workspace$ ifconfig | grep -i ether
+        ether 00:0c:29:73:c7:50  txqueuelen 1000  (Ethernet)
