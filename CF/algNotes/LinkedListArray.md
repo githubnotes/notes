@@ -18,12 +18,15 @@
 # Array
 ## Subarray
 Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
-- Window Sum
-    - [1,2,7,8,5] k = 3
-    - 1 + 2 + 7 = 10
-    - 1 + 2 + 7 - 1 + 9 = 2 + 7 + 8 = 17
-    - 2 + 7+ 8 - 2 + 5 = 7+ 8 + 5 = 20
-- Subarray Sum
+- Maximum Subarray (1 more)  P0
+    -           -2 -2 -3  4 -1  2 1
+    - sum:      -2 -4 -7 -3 -4 -1 2 1
+    - max:      -2 -2 -2  4  4  5 6
+    - minPrfix: -2 -2 -7 -7 -7 -7 -7
+    - Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
+
+
+- Subarray Sum (1 more)  P0
     - prefixSum is same
 
 - Subarray Sum Closest
