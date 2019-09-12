@@ -83,8 +83,7 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
                 end--;
             }
         }
-        
-        
+                
         if (k <= end) {
             return partition(nums, left, end, k);
         } else if (k >= start) {

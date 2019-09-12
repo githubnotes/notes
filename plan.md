@@ -30,4 +30,5 @@
 
 9/12/2019 start
 https://www.lintcode.com/ladder/79/
+https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=917471298
 finish end of the month
