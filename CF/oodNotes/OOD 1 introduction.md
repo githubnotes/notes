@@ -175,3 +175,4 @@ SOLID 原则
 ## Question:
 - abstract VS interface
     - In java, a class can inherit only one abstract class, but can impl multiple interface 
+- AreaCalculator to aclculat the Rectangle,Cube

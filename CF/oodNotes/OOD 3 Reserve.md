@@ -37,13 +37,32 @@
             排除之后剩下的就是可选的桌子，随意选一张即可
 
 ### Hotal
-
 - Search room from one hotal by loaction and time?
     - Search criteria-> search() -> List<result> -> Select() -> Receipt
         - result should be room type
-    - - ![Hotal](./assets/chap3_2.png)
+    - ![Hotal](./assets/chap3_2.png)
+
+    - Q: 
+        - 用户search输入什么，返回什么？
+        - 用户reserve 输入什么，返回什么？
+        - 用户输入时间返回什么List<result>？
+        - 用户输入时间和房型和房间个数，返回一个什么？
+
+    - List<Room> room, List<Room, List<Date>> roomReservations
+    - searchRequest (Data startDate, Data endDate)
+        - base on the request return a Map<roomType,Set<Room>> (通过时间，去 roomReservations return a Map<RoomType,Set<Room>>)
+    - makeResrvation (ReservationRequest r)
+        - ReservationRequest (Data startDate, Data endDate, Map<rootTpye, #rooms>) 通过Map<rootTpye, #rooms>去request的返回的Map<roomType,Set<Room>> 返回一个Reservation(startTime, endTime, Set<room>)
 
 - Search all hotal by loaction and time?
     - Search criteria-> search() -> List<result> -> Select() -> Receipt
         - result should be room type
     - ![Booking Hotal](./assets/chap3_2.png)
+
+    - List<Room> room, List<Room, List<Date>> roomReservations
+    - searchHotalRequest (Data startDate, Data endDate, City, ZipCode)
+        - base on the request return a List<Hotal> (通过时间，去 roomReservations return a Map<RoomType,Set<Room>>)
+    - searchRequest (List<Hotal>,Data startDate, Data endDate)
+        - base on the request return a Map<roomType,Set<Room>> (通过时间，去 roomReservations return a Map<RoomType,Set<Room>>)
+    - makeResrvation (ReservationRequest r)
+        - ReservationRequest (Data startDate, Data endDate, Map<rootTpye, #rooms>) 通过Map<rootTpye, #rooms>去request的返回的Map<roomType,Set<Room>> 返回一个Reservation(startTime, endTime, Set<room>)
