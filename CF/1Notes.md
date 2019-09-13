@@ -78,3 +78,8 @@ Thanks,
 
 
 Administrative Processing
+
+
+Do you think I can do ramp up with Wei together since we believe it will be more efficient for us. if so could you please add me and Wei to a channel? 
+
+remotedev-fzhou.west.isilon.com
