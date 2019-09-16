@@ -83,3 +83,29 @@ Administrative Processing
 Do you think I can do ramp up with Wei together since we believe it will be more efficient for us. if so could you please add me and Wei to a channel? 
 
 remotedev-fzhou.west.isilon.com
+
+
+
+
+ I-129 申请批件 (petition) 或 I-797 通过凭证 (Notice of Action) 的条码编号
+
+
+ DS-160 confirmation page with barcode.
+ Interview appointment letter confirming that the interview was booked through the correct service.
+ A 2 inch by 2 inch passport-type photograph taken within the past six months against a white background.
+ Visa application fee receipt.
+ Your email address.
+ Current letter of employment (instructions to obtain provided).
+ Original H-1B approval notice, Form I-797 Notice of Action (previously sent).
+ Certified copy of H-1B petition filed with USCIS, including petitioner support letter and Labor Condition Application.
+ Original or certified copies of complete academic credentials and, if applicable, foreign credentials evaluation.
+ W-2 statements for all years you have been employed in the U.S.
+2, Shanghai Visa Instructions
+ All paystubs from the current calendar year.
+ Names and current phone numbers of the personnel managers at your present and previous places of employment
+in the U.S.
+ Copies of all previously issued U.S. immigration documents (if applicable).
+ All prior passports that contain U.S. visas (if applicable).
+ Passport with at least six months of validity remaining and at least one blank page.
+ Appointment letter confirming you booked your appointment through this service
+http://www.ustraveldocs.com/cn/cn-niv-appointmentschedule.asp
