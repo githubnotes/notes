@@ -109,3 +109,43 @@ in the U.S.
  Passport with at least six months of validity remaining and at least one blank page.
  Appointment letter confirming you booked your appointment through this service
 http://www.ustraveldocs.com/cn/cn-niv-appointmentschedule.asp
+
+
+
+Creating your vCluster (this might take a while).
+build: b.master.320r
+created: '2019-09-16T18:27:31.577930+00:00'
+expires: '2019-09-23T18:27:31.576612+00:00'
+id: 717282
+ips: [10.224.39.210, 10.224.39.211, 10.224.39.212, 10.224.39.213]
+location: rdu1
+logs: https://ducttape.west.isilon.com:443/api/v2.0/clusters/717282/logs
+name: fzhou-kvwxoo6
+notes: ''
+owner: fzhou
+provider: VCENTER
+state: OK                
+type: ONEFS
+vms: [DTRDUONEFS506497, DTRDUONEFS506498, DTRDUONEFS506499]
+isi network subnets modify groupnet0.subnet0 --sc-service-addr 10.224.39.213
+
+dig @fzhou-dns.west.isilon.com fzhou.west.isilon.com
+
+Do you plan to have a call or would like me to go to your office?
+
+mount fzhou.west.isilon.com:/path/to/onefs/source/code/on/local/workstation
+
+
+
+
+mount remotedev-fzhou.west.isilon.com://ifs/home/fzhou/onefs /mnt/sourcs
+
+sudo vim /etc/exports
+
+/ifs/home/fzhou/onefs 0.0.0.0/255.0.0.0(rw,sync,no_subtree_check,all_squash,anonuid=4397,anongid=1000)
+
+sudo chmod -R o+rx /ifs/home/fzhou/onefs
+
+
+   cribsbiox.west.isilon.com:/ifs/home/fzhou /mnt/source nfs intr,rw,rsize=32768,wsize=32768,tcp 0 0
+mount /mnt/source
