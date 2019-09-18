@@ -137,3 +137,6 @@ mount remotedev-fzhou.west.isilon.com://ifs/home/fzhou/onefs /mnt/sourcs
 sudo chmod -R o+rx /ifs/home/fzhou/onefs
 cribsbiox.west.isilon.com:/ifs/home/fzhou /mnt/source nfs intr,rw,rsize=32768,wsize=32768,tcp 0 0
 mount /mnt/source
+
+
+AA009ANG87
