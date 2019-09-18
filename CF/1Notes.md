@@ -85,10 +85,12 @@ Do you think I can do ramp up with Wei together since we believe it will be more
 remotedev-fzhou.west.isilon.com
 
 
-I-129 申请批件 (petition) 或 I-797 通过凭证 (Notice of Action) 的条码编号
 
 
-DS-160 confirmation page with barcode.
+ I-129 申请批件 (petition) 或 I-797 通过凭证 (Notice of Action) 的条码编号
+
+
+ DS-160 confirmation page with barcode.
  Interview appointment letter confirming that the interview was booked through the correct service.
  A 2 inch by 2 inch passport-type photograph taken within the past six months against a white background.
  Visa application fee receipt.
@@ -108,8 +110,6 @@ in the U.S.
  Appointment letter confirming you booked your appointment through this service
 http://www.ustraveldocs.com/cn/cn-niv-appointmentschedule.asp
 
-
-Certified copy of H-1B petition filed with USCIS, including petitioner support letter and Labor Condition Application.
 
 
 Creating your vCluster (this might take a while).
@@ -131,9 +131,21 @@ isi network subnets modify groupnet0.subnet0 --sc-service-addr 10.224.39.213
 
 dig @fzhou-dns.west.isilon.com fzhou.west.isilon.com
 
+Do you plan to have a call or would like me to go to your office?
+
+mount fzhou.west.isilon.com:/path/to/onefs/source/code/on/local/workstation
+
+
+
+
 mount remotedev-fzhou.west.isilon.com://ifs/home/fzhou/onefs /mnt/sourcs
 
+sudo vim /etc/exports
+
 /ifs/home/fzhou/onefs 0.0.0.0/255.0.0.0(rw,sync,no_subtree_check,all_squash,anonuid=4397,anongid=1000)
+
 sudo chmod -R o+rx /ifs/home/fzhou/onefs
-cribsbiox.west.isilon.com:/ifs/home/fzhou /mnt/source nfs intr,rw,rsize=32768,wsize=32768,tcp 0 0
+
+
+   cribsbiox.west.isilon.com:/ifs/home/fzhou /mnt/source nfs intr,rw,rsize=32768,wsize=32768,tcp 0 0
 mount /mnt/source
