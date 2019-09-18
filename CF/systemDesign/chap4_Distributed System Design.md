@@ -71,5 +71,9 @@
             - 找距离最近的（快）
             - 找现在不干活的（平衡traffic）
 
-    - How to solve Chunk Server failure?
+    - How to solve Chunk Server failure? 
         - retry (重新分配)
+
+
+    https://www.jiuzhang.com/qa/627/
+    什么情况用sstable vs lsm tree
