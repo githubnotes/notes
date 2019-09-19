@@ -133,10 +133,12 @@ dig @fzhou-dns.west.isilon.com fzhou.west.isilon.com
 
 mount remotedev-fzhou.west.isilon.com://ifs/home/fzhou/onefs /mnt/sourcs
 
+
+add line to /etc/fstab
 /ifs/home/fzhou/onefs 0.0.0.0/255.0.0.0(rw,sync,no_subtree_check,all_squash,anonuid=4397,anongid=1000)
+
 sudo chmod -R o+rx /ifs/home/fzhou/onefs
 cribsbiox.west.isilon.com:/ifs/home/fzhou /mnt/source nfs intr,rw,rsize=32768,wsize=32768,tcp 0 0
 mount /mnt/source
-
 
 AA009ANG87
