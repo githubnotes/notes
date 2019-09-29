@@ -63,10 +63,6 @@ BST defination:
 https://www.jiuzhang.com/solution/convert-binary-search-tree-to-doubly-linked-list/
 
 
-
-
-
-
 ### Preorder  Root L R 
 https://www.lintcode.com/problem/binary-tree-preorder-traversal/
 

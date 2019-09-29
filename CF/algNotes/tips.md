@@ -29,4 +29,7 @@ Map<Integer, PriorityQueue<Integer>> hash = new HashMap<Integer, PriorityQueue<I
 PriorityQueue<Integer> pq = hash.get(r.id);
 hash.getKey()
 hash.getVlaue()
+
+Character.isDigit(abbr.charAt(j))
+Integer.valueOf(abbr.substring(start, j));
 ```
