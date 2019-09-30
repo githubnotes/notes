@@ -26,6 +26,7 @@ PriorityQueue<Integer> minheap = new PriorityQueue<Integer>(k, new Comparator<In
 });
 
 Map<Integer, PriorityQueue<Integer>> hash = new HashMap<Integer, PriorityQueue<Integer>>();
+Map.Entry<Integer, PriorityQueue<Integer>> entry : hash.entrySet()
 PriorityQueue<Integer> pq = hash.get(r.id);
 hash.getKey()
 hash.getVlaue()
