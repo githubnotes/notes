@@ -65,7 +65,16 @@ Example 1:
 Input: points = [[4,6],[4,7],[4,4],[2,5],[1,1]], origin = [0, 0], k = 3 
 Output: [[1,1],[2,5],[4,4]]
 
+******************Copy List with Random Pointer***********************************
+1: Map
+2: 1 -> 1` -> 2 -> 2`
+
+******************cloneTree***********************************
+
+******************cloneGraph***********************************
 */
+
+
 
 public class Solution {
     /**
@@ -330,6 +339,113 @@ public class Solution {
         return f[l];
         
         
+    }
+}
+
+
+public RandomListNode copyRandomList(RandomListNode head) {
+        // write your code here
+        
+        Map<Integer, RandomListNode> map = new HashMap<>();
+        
+        
+        RandomListNode faker = new RandomListNode(-1);
+        RandomListNode cur = faker;
+        
+        while(head != null){
+            
+            RandomListNode newNode = null;
+            if(!map.containsKey(head.label)){
+                newNode = new RandomListNode(head.label);
+                map.put(head.label, newNode);
+            }
+            
+            newNode = map.get(head.label);
+            cur.next = newNode;
+            
+            RandomListNode newRandomNode = null;
+            if(head.random != null){
+                if(!map.containsKey(head.random.label)){
+                    newRandomNode = new RandomListNode(head.random.label);
+                     map.put(head.random.label, newRandomNode);
+                }
+               newRandomNode = map.get(head.random.label);
+            }
+            
+            cur.next.random =  newRandomNode;
+           
+           
+           head = head.next;
+           cur =  cur.next ;
+        }
+        
+        return faker.next;
+    }
+
+     public TreeNode cloneTree(TreeNode root) {
+        // write your code here
+        if(root == null){
+            return null;
+        }
+        TreeNode clone_root = new TreeNode(root.val);
+    
+        clone_root.left = cloneTree(root.left);
+        clone_root.right = cloneTree(root.right);
+        
+        return clone_root;
+        
+    }
+
+
+
+    public class Solution {
+    /*
+     * @param node: A undirected graph node
+     * @return: A undirected graph node
+     */
+    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+        // write your code here
+         if (node == null) {
+            return node;
+        }
+        ArrayList<UndirectedGraphNode> mySet = getNodes(node);
+        
+        Map<UndirectedGraphNode, UndirectedGraphNode> graph = new HashMap<>();
+        
+        for(UndirectedGraphNode item: mySet){
+            graph.put(item,new UndirectedGraphNode (item.label));
+        }
+        
+        for(UndirectedGraphNode item: mySet){
+            UndirectedGraphNode newNode = graph.get(item);
+            
+            for(UndirectedGraphNode nei: item.neighbors){
+                newNode.neighbors.add(graph.get(nei));
+            }
+        }
+        
+       
+        return graph.get(node);
+       
+    }
+    
+    private ArrayList<UndirectedGraphNode> getNodes(UndirectedGraphNode node) {
+        Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
+        HashSet<UndirectedGraphNode> set = new HashSet<>();
+
+        queue.offer(node);
+        set.add(node);
+        while (!queue.isEmpty()) {
+            UndirectedGraphNode head = queue.poll();
+            for (UndirectedGraphNode neighbor : head.neighbors) {
+                if (!set.contains(neighbor)) {
+                    set.add(neighbor);
+                    queue.offer(neighbor);
+                }
+            }
+        }
+
+        return new ArrayList<UndirectedGraphNode>(set);
     }
 }
 ```
