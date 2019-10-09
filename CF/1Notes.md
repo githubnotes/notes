@@ -151,3 +151,8 @@ sudo chmod -R o+rx /ifs/home/fzhou/onefs
 mount /mnt/source
 
 
+make isi-isilon OVERRIDE=isilon/bin/isi_smartconnect
+make isi-isilon OVERRIDE=isilon/bin/isi_flexnet
+make isi-isilon OVERRIDE=isilon/lib/isi_flexnet
+
+make isi-isilon OVERRIDE=isilon/isilon/lib/isi_flexnet/
