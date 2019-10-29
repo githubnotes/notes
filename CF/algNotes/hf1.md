@@ -1,4 +1,4 @@
-
+![subset](./assets/kruskal.png)
 ```java
 
 /*************Valid Word Abbreviation******************************
@@ -71,7 +71,8 @@ Output: [[1,1],[2,5],[4,4]]
 
 ******************cloneTree***********************************
 
-******************cloneGraph***********************************
+******************Minimum Spanning Tree***********************************
+
 */
 
 
@@ -396,8 +397,14 @@ public RandomListNode copyRandomList(RandomListNode head) {
         
     }
 
-
-
+/**
+ * Definition for undirected graph.
+ * class UndirectedGraphNode {
+ *     int label;
+ *     ArrayList<UndirectedGraphNode> neighbors;
+ *     UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
+ * };
+ */
     public class Solution {
     /*
      * @param node: A undirected graph node
@@ -448,4 +455,89 @@ public RandomListNode copyRandomList(RandomListNode head) {
         return new ArrayList<UndirectedGraphNode>(set);
     }
 }
+
+
+/**
+ * Definition for a Connection.
+ * public class Connection {
+ *   public String city1, city2;
+ *   public int cost;
+ *   public Connection(String city1, String city2, int cost) {
+ *       this.city1 = city1;
+ *       this.city2 = city2;
+ *       this.cost = cost;
+ *   }
+ * }
+ */
+public class Solution {
+    /**
+     * @param connections given a list of connections include two cities and cost
+     * @return a list of connections from results
+     */
+   
+    public List<Connection> lowestCost(List<Connection> connections) {
+        // Write your code here
+        List<Connection> res = new ArrayList<Connection>();
+        
+        Collections.sort(connections, new Comparator<Connection>() {
+            public int compare(Connection a, Connection b) {
+                if (a.cost != b.cost) {
+                    return a.cost - b.cost;
+                }
+                if (!a.city1.equals(b.city1)) {
+                    return a.city1.compareTo(b.city1);
+                }
+                return a.city2.compareTo(b.city2);
+            }
+        });
+        
+        Map<String, String> father = new HashMap<>();
+        for (Connection con : connections) {
+            String root1 = find(con.city1, father), root2 = find(con.city2, father);
+            System.out.println(root1 + "   " + root2);
+            if (!root1.equals(root2)) {
+                father.put(root1, root2);
+                res.add(con);
+            }
+        }
+        
+        if (res.size() != father.size() - 1) {
+            return new ArrayList<Connection>();
+        }
+        
+        return res;
+    }
+    
+    private String find(String str, Map<String, String> father) {
+        if (!father.containsKey(str)) {
+            father.put(str, str);
+        } else if (!father.get(str).equals(str)) {
+            father.put(str, find(father.get(str), father));
+            System.out.println(str +  " + " + find(father.get(str), father));
+        }
+        
+        return father.get(str);
+    } 
+    
+}
+
+Input
+Show Difference
+["Acity","Bcity",1]
+["Acity","Ccity",2]
+["Bcity","Ccity",3]
+Your stdout
+    Acity   Bcity
+        Acity + Bcity
+    Bcity   Ccity
+        Bcity + Ccity
+    Ccity   Ccity
+Output
+["Acity","Bcity",1]
+["Acity","Ccity",2]
+Expected
+["Acity","Bcity",1]
+["Acity","Ccity",2]
+
+
 ```
