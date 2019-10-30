@@ -143,8 +143,3 @@ mount /mnt/source
 
 AA009ANG87 850186966901249195061148
 
-
-- set up, get bug,  seeson. all good. team is great. Please let me know if you have any new expectation to me or if think my perfermance or ramp up is not good E.
-- Safe?
-- I would like to sechedue the VISA stamping appointments the Oct 10th.Take PTO from Oct 7th to 25th.
-  - Ramonly the process will take C weeks. Maybe it take one more week. WFH Shanghai
