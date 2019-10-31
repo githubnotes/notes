@@ -1,4 +1,56 @@
+https://github.west.isilon.com/isilon/onefs.git
+
+pip install --trusted-host artifactory.west.isilon.com --index-url http://artifactory.west.isilon.com:8081/artifactory/api/pypi/pypi-repo/simple  isilon-ducttape-cli
+
+dt --owner fzhou vcluster create --num-ips 4 BR_MASTER --location seattle
+10.7.147.6
+
+dt --owner arahimi vcluster create BR_MASTER --location sea1 --num-nodes 1
+
+
 ```cpp
+
+TEST(conflicting_rules)
+{
+	struct isi_error *error = NULL;
+	struct flx_rule rule_1 = {};
+	int idx;
+
+	for(idx = 0; idx < 1; idx++) {
+		error = NULL;
+		init_config(idx);
+
+		/*
+		 * Setup two bonding conflicted rules.
+		 */
+		flx_rule_clean(&rule_1);
+	
+		flx_rule_set_name(&rule_1, "rule_1");
+		flx_rule_set_name(&rule_1, "rule_1");
+
+		/*
+		 * Try adding the rule 1 first and then the rule 1
+		 */
+		flx_pool_add_rule(pool, &rule_1, false, &error);
+		fail_if_error(error);
+
+		flx_pool_add_rule(pool, &rule_1, false, &error);
+		fail_unless(error != null);
+
+		flx_pool_remove_rule(pool, &rule_1, &error);
+		fail_if_error(error);
+
+		flx_pool_add_rule(pool, &rule_1, false, &error);
+		fail_if_error(error);
+
+		flx_rule_clean(&rule_1);
+		
+		if (config != NULL) {
+			flx_config_free(config);
+			config = NULL;
+		}
+	}
+    
 struct flx_rule {
 	/**
 	 * Increments when _dirty is set and config is saved
