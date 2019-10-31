@@ -538,4 +538,94 @@ Expected
 ["Acity","Ccity",2]
 
 
+
+public class Solution {
+    /**
+     * @param word: a non-empty string
+     * @param abbr: an abbreviation
+     * @return: true if string matches with the given abbr or false
+     */
+    public boolean validWordAbbreviation(String word, String abbr) {
+        
+        if(word == null || abbr == null){
+            return false;
+        }
+        // write your code here
+        
+        int i = 0;
+        int j = 0;
+        
+        while(i < word.length && j < abbr.length){
+            int moveIndex = 0;
+            while(j < abbr.length && abbr.charAt(j).isDigit()){
+                moveIndex = moveIndex * 10 + abbr.charAt(j) - '0';
+                j++;
+            }
+            
+            i += j;
+            
+            if(word.charAt(i) != word.charAt[j]){
+                return false;
+            }
+            
+            i++;
+            j++;
+        }
+        
+        
+        return i == word.length && j == abbr.length;
+        
+    }
+}
+
+  while(i < word.length() && j < abbr.length()){
+            if(abbr.charAt(j) == '0'){
+                return false;
+            }
+        
+            if(Character.isDigit(abbr.charAt(j))){
+                
+                int index = 0;
+                while(j < abbr.length() && Character.isDigit(abbr.charAt(j))){
+                    index = index * 10 + abbr.charAt(j) - '0';
+                    j++;
+                }   
+                
+                i += index;
+            }else{
+                if(word.charAt(i) != abbr.charAt(j)){
+                    return false;
+                }
+          
+                i++;
+                j++;
+            }
+        }
+        
+        return i == word.length() && j == abbr.length();
+
+
+          List<Interval> res = new LinkedList<>();
+        
+        if(intervals == null || intervals.size() == 0){
+            return res;
+        }
+        
+        intervals.sort(Comparator.comparing(i -> i.start));
+        
+        Interval last = null;
+        
+        
+        for(Interval item : intervals){
+           if(last  == null || last.end < item.start){
+               res.add(item);
+               last = item;
+           }else{
+               last.end = Math.max(item.end,last.end);
+           }
+            
+        }
+        
+        return res;
+
 ```

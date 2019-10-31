@@ -2,9 +2,11 @@
 Character.isLetter(c) || Character.isDigit(c);
 Character.toLowerCase(s.charAt(front)
 Character.isUpperCase(chars[j])
-
+Character.isDigit(abbr.charAt(j))
+Integer.valueOf(abbr.substring(start, j));
 String subString = s.substring(start, i + 1);
 subString.append("#");
+char chars[] = s.toCharArray();
 
 Queue<Integer> myQ = new LinkedList<>();
 Set<Integer> hash = new HashSet<>();
@@ -31,6 +33,4 @@ PriorityQueue<Integer> pq = hash.get(r.id);
 hash.getKey()
 hash.getVlaue()
 
-Character.isDigit(abbr.charAt(j))
-Integer.valueOf(abbr.substring(start, j));
 ```
