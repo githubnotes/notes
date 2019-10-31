@@ -144,8 +144,6 @@ public class Solution {
                 }
         }
         
-        
-        
         for (Map.Entry<Integer, PriorityQueue<Integer>> entry : hash.entrySet()) {
             int id = entry.getKey();
             PriorityQueue<Integer> scores = entry.getValue();
