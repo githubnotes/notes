@@ -16,7 +16,15 @@
     - 415. Valid Palindrome
 
 
-
+# Subarray
+Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
+## Winodw sum
+    - 604. Window Sum
+    - 642. Moving Average from Data Stream
+## subarray
+    - 41. Maximum Subarray
+    - 138. Subarray Sum
+    - 139. Subarray Sum Closest
 # DFS
 ## subtree
     - 628. Maximum Subtree
