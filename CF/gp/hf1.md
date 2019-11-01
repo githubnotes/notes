@@ -717,4 +717,60 @@ private Point global_origin = null;
     private int getDistance(Point a, Point b) {
         return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
     }
+
+
+
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        // write your code here
+        
+        HashMap<Integer, List<Integer>> graph= mapping(numCourses, prerequisites);
+        
+         Map<Integer, Integer> indegreeMap = inDegree(numCourses,graph);
+         
+         Queue<Integer> myQ= new LinkedList<>();
+        int re[] =  new int[numCourses];    
+        int count = numCourses -1;
+        
+         for(int i = 0; i < numCourses; i++){
+             if(!indegreeMap.containsKey(i)){
+                 myQ.offer(i);
+                 re[count--] = i;
+                 }
+         }
+         
+        while(!myQ.isEmpty()){
+          
+           Integer temp = myQ.poll();
+          for(Integer item: graph.get(temp)){
+              indegreeMap.put(item, indegreeMap.get(item) -1);
+              
+              if( indegreeMap.get(item) ==0 ){
+                   myQ.offer(item);
+                  re[count--] = item;
+              }
+          }
+          
+        }
+        
+        if(count != -1){
+            return new int[0];
+        }
+      
+        return re;
+        
+    }
+
+    private HashMap<Integer, List<Integer>> mapping(int numCourses, int[][] prerequisites){
+        
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
+        for (int i = 0; i < numCourses; i++) {
+            map.put(i, new ArrayList<>());
+        }
+        for (int i = 0; i < prerequisites.length; i++) {
+            int cur = prerequisites[i][0];
+            int pre = prerequisites[i][1];
+            map.get(cur).add(pre);
+        }
+        return map;
+    } 
 ```

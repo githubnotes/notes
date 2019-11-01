@@ -9,7 +9,12 @@ dt --owner arahimi vcluster create BR_MASTER --location sea1 --num-nodes 1
 
 wget http://cribsbiox.west.isilon.com/home/cclayton/public/bug/bug254932/python2.7.core.gz
 gdbcore `which python2.7` /root/python2.7.core.gz /mnt/bb/b.master.112/obj.RELEASE/symbols
+ 
+make isi-isilon isi-isilon-install OVERRIDE=isilon/lib/isi_flexnet 
+pkill isi_papi_d
+isi network rules create groupnet0.subnet0.pool0.rule22 ext-1 --description 'practice rule 22'
 
+ 
 ```cpp
 
 TEST(conflicting_rules)
