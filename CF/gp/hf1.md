@@ -166,11 +166,11 @@ public class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         // write your code here
         
-        HashMap<Integer, List<Integer>> graph= mapping(numCourses, prerequisites);
+        HashMap<Integer, List<Integer>> graph = mapping(numCourses, prerequisites);
         
-         Map<Integer, Integer> indegreeMap = inDegree(numCourses,graph);
+        Map<Integer, Integer> indegreeMap = inDegree(numCourses,graph);
          
-         Queue<Integer> myQ= new LinkedList<>();
+        Queue<Integer> myQ= new LinkedList<>();
         int re[] =  new int[numCourses];    
         int count = numCourses -1;
         
@@ -183,11 +183,11 @@ public class Solution {
          
         while(!myQ.isEmpty()){
           
-           Integer temp = myQ.poll();
+          Integer temp = myQ.poll();
           for(Integer item: graph.get(temp)){
               indegreeMap.put(item, indegreeMap.get(item) -1);
               
-              if( indegreeMap.get(item) ==0 ){
+              if( indegreeMap.get(item) == 0){
                    myQ.offer(item);
                   re[count--] = item;
               }
@@ -673,4 +673,48 @@ public class Solution {
 
 //Course Schedule
 
+
+private Point global_origin = null;
+    public Point[] kClosest(Point[] points, Point origin, int k) {
+        // Write your code here
+        global_origin = origin;
+        PriorityQueue<Point> pq = new PriorityQueue<Point> (k, new Comparator<Point> () {
+            @Override
+            public int compare(Point a, Point b) {
+                int diff = getDistance(b, global_origin) - getDistance(a, global_origin);
+                if (diff == 0)
+                    diff = b.x - a.x;
+                if (diff == 0)
+                    diff = b.y - a.y;
+                return diff;
+            }
+        });
+
+
+        PriorityQueue<Point> pq = new PriorityQueue<>(k, new Comparator<point> (){
+            @Override
+            public int compare(Point a, Point b){
+                int diff = getDistance(b, global_origin) - getDistance(a, global_origin);
+
+                if()
+            }
+
+        });
+
+        for (int i = 0; i < points.length; i++) {
+            pq.offer(points[i]);
+            if (pq.size() > k)
+                pq.poll();
+        }
+        
+        k = pq.size();
+        Point[] ret = new Point[k];  
+        while (!pq.isEmpty())
+            ret[--k] = pq.poll();
+        return ret;
+    }
+    
+    private int getDistance(Point a, Point b) {
+        return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
+    }
 ```

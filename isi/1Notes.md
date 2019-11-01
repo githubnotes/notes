@@ -144,7 +144,6 @@ mount /mnt/source
 AA009ANG87 850186966901249195061148
 
 
-
 1: setup the workstation && impl the unit test for bug 257705
 2: Armin assign anther bug from bug pool which is bug 254932 to me 
 3: Since Armin is not in the bugpool team, if so we can do tegther.
