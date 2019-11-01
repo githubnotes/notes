@@ -7,6 +7,8 @@ dt --owner fzhou vcluster create --num-ips 4 BR_MASTER --location seattle
 
 dt --owner arahimi vcluster create BR_MASTER --location sea1 --num-nodes 1
 
+wget http://cribsbiox.west.isilon.com/home/cclayton/public/bug/bug254932/python2.7.core.gz
+gdbcore `which python2.7` /root/python2.7.core.gz /mnt/bb/b.master.112/obj.RELEASE/symbols
 
 ```cpp
 
