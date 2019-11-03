@@ -7,13 +7,7 @@
 
 
 
-# String
-## Palindrome
-    - 627. Longest Palindrome
-    - 415. Valid Palindrome
-## two pointer String
-    - 637. valid Word Abbreviation
-    - 415. Valid Palindrome
+
 
 
 # Subarray
@@ -46,4 +40,23 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
     - High Five
     - Log Sorting
 ## others
-    - K Closest 
+    - K Closest
+
+
+# String
+## Hash 字符/字符串统计类问题
+    - 646. First Position Unique Character
+    - Valid Anagram
+    - 772. Group Anagrams
+    - Find All Anagrams in a String
+    - 384. Longest Substring Without Repeating Characters
+    - 124. Longest Consecutive Sequence
+    - 774. Repeated DNA
+### Hash + Arr
+    - 526. Load Balancer
+## Palindrome
+    - 627. Longest Palindrome
+    - 415. Valid Palindrome
+## two pointer String
+    - 637. valid Word Abbreviation
+    - 415. Valid Palindrome
