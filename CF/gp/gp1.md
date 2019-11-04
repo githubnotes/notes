@@ -83,10 +83,6 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
 # others
 ## Window Sum
     - 604. window sum
-## topo sort
-    - course schedule/II
-## graph
-    - clone graph
 ## list
     - copy copyRandomList
 ## sorting

@@ -89,7 +89,6 @@ public class Solution {
         // Write your code here
         global_origin = origin;
         PriorityQueue<Point> pq = new PriorityQueue<Point> (k, new Comparator<Point> () {
-            @Override
             public int compare(Point a, Point b) {
                 int diff = getDistance(b, global_origin) - getDistance(a, global_origin);
                 if (diff == 0)
@@ -128,8 +127,7 @@ public class Solution {
     
         for(Record record : results){
             if(!hash.containsKey(record.id)){
-                 PriorityQueue<Integer> pq = new PriorityQueue<>();
-          
+                PriorityQueue<Integer> pq = new PriorityQueue<>();
                 hash.put(record.id,pq);
             }
                 

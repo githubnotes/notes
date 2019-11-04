@@ -36,7 +36,6 @@ hash.getVlaue()
 
 
 PriorityQueue<Point> pq = new PriorityQueue<Point> (k, new Comparator<Point> () {
-            @Override
             public int compare(Point a, Point b) {
                 int diff = getDistance(b, global_origin) - getDistance(a, global_origin);
                 if (diff == 0)
