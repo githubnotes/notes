@@ -5,11 +5,6 @@
 ## merge lists
     - 156. Merge Intervals
 
-
-
-
-
-
 # Subarray
 Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
 ## Winodw sum
@@ -22,25 +17,6 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
 # DFS
 ## subtree
     - 628. Maximum Subtree
-
-
-
-
-
-# others
-## Window Sum
-    - 604. window sum
-## topo sort
-    - course schedule/II
-## graph
-    - clone graph
-## list
-    - copy copyRandomList
-## sorting
-    - High Five
-    - Log Sorting
-## others
-    - K Closest
 
 
 # String
@@ -60,7 +36,6 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
 ## two pointer String
     - 637. valid Word Abbreviation
     - 415. Valid Palindrome
-
 
 
 # BFS类问题
@@ -93,5 +68,29 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
         - mapping old node to new node
         - conncet all edges (copy neighbors)
     - Graph Valid Tree
-## Minimum Spanning Tree
+## Topological Sorting (Directed)
+    - Topological Sorting
+        - collect in-degree 找到所有的 indegree
+        - put all nodes that indgree == 0 into queue
+        - bfs
+    - Course Schedule I && II (to-do)
+    - Sequence Reconstruction (to-do)
+## Minimum Spanning Tree (kruskal & Union Find Sets)
     - 589. Connecting Graph
+
+
+
+# others
+## Window Sum
+    - 604. window sum
+## topo sort
+    - course schedule/II
+## graph
+    - clone graph
+## list
+    - copy copyRandomList
+## sorting
+    - High Five
+    - Log Sorting
+## others
+    - K Closest
