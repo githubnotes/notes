@@ -60,3 +60,38 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
 ## two pointer String
     - 637. valid Word Abbreviation
     - 415. Valid Palindrome
+
+
+
+# BFS类问题
+- 二叉树上的宽搜 BFS in Binary Tree
+- 图上的宽搜 BFS in Graph
+   - 拓扑排序 Topological Sorting
+- 棋盘上的宽搜 BFS
+
+- When should use BFS?
+- 图的遍历 Traversal in Graph
+  - 层级遍历 Level Order Traversal
+  - 由点及面 Connected Component
+  - 拓扑排序 Topological Sorting
+- 最短路径 Shortest Path in Simple Graph
+  - 仅限简单图求最短路径 
+    - (图中每条边，没有方向，没有权重)
+## BFS in Binary Tree
+    - Binary Tree Level Order Traversal
+    - Serialize and Deserialize Binary Tree (1 more)
+         - https://www.lintcode.com/help/binary-tree-representation/
+    - Binary Tree Level Order Traversal II
+    - Binary Tree Zigzag Order Traversal
+    - Convert Binary Tree to Linked Lists by Depth
+## BFS in graph (Undirected)
+    - 433. Number of Islands
+    - Knight Shortest Path (to-do)
+    - Build Post Office II (to-do)
+    - Clone graph
+        - find all nodes
+        - mapping old node to new node
+        - conncet all edges (copy neighbors)
+    - Graph Valid Tree
+## Minimum Spanning Tree
+    - 589. Connecting Graph

@@ -772,5 +772,49 @@ private Point global_origin = null;
             map.get(cur).add(pre);
         }
         return map;
-    } 
+    }
+
+
+
+
+public class Solution {
+    /**
+     * @param grid: a boolean 2D matrix
+     * @return: an integer
+     */
+    public int numIslands(boolean[][] grid) {
+        // write your code here
+        if(grid == null || grid.length == 0){
+            return 0;
+        }
+        
+        int m = grid.length;
+        System.out.println(m);
+        int n = grid[0].length;
+        System.out.println(n);
+         int res = 0;
+        
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if(grid[i][j]){
+                    dfs(grid, i,j,m,n);
+                    res++;
+                }
+            }
+        }
+        
+        return res;
+    }
+    
+    private void dfs(boolean[][] grid,int x, int y, int m,int n){
+        if(x >= m || y >= n || x < 0|| y < 0 || !grid[x][y]){
+            return;
+        }
+        grid[x][y] = false;
+        dfs(grid,x-1,y,m,n);
+        dfs(grid,x+1,y,m,n);
+        dfs(grid,x,y-1,m,n);
+        dfs(grid,x,y+1,m,n);
+    }
+}
 ```
