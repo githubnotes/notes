@@ -72,7 +72,7 @@ Thinking small is a self-fulfilling prophecy. Leaders create and communicate a b
 #### BIAS FOR ACTION: Describe how you would handle a busy situation where three people are waiting for help from you.
 Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.
 - Base on priority. Basiclly the question for me is how to figour out the priority.
-- When I was TA what I did. At the time I am busy, since I was taking 7 courses a semester. I will figour out the priority first, If the question is not urgent, such as it's going to dues soon. then I will provide learning materials to the student first. If the questions are related/ similar. I  answer the questions as a group/OR forword to the students.
+- When I was TA what I did. At the time I was busy, since I was taking 7 courses a semester. I will figour out the priority first, If the question is not urgent, such as it's going to dues soon. then I will provide learning materials to the student first. If the questions are related/ similar. I  answer the questions as a group/OR forword to the students.
 
 
 #### FRUGALITY: Tell me about a time where you thought of a clever new way to save money for the company.
