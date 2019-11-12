@@ -678,4 +678,22 @@ public class Solution {
         }
     }
 }
+
+
+public int helper(TreeNode root, int sum, List<Integer> path){
+
+    if(root == null){
+        return false;
+    }
+
+    if(root.left == null && root.right == null && root.val == sum){
+        res.add(path);
+        return true;
+    }
+
+    int l = helper(root, sum-root.val, path.add(root.val));
+    int r = helper(root, sum-root.val, path.add(root.val));
+
+    return l&r;        
+}
 ```

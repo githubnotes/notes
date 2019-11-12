@@ -1,5 +1,7 @@
-# 序列型动态规划/楼梯问题
-    - 512. Decode Ways
+# Binary Tree & Divide Conquer
+- Maximum Depth of Binary Tree [97]
+
+
 
 # merge
 ## merge lists
@@ -90,3 +92,10 @@ Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]
     - Log Sorting
 ## others
     - K Closest
+
+
+
+
+
+# 序列型动态规划/楼梯问题
+    - 512. Decode Ways

@@ -14,7 +14,12 @@ make isi-isilon isi-isilon-install OVERRIDE=isilon/lib/isi_flexnet
 pkill isi_papi_d
 isi network rules create groupnet0.subnet0.pool0.rule22 ext-1 --description 'practice rule 22'
 
- 
+/mnt/sharedfolder/onefs/isilon/lib/isi_flexnet
+make checkcov
+ lines......: 70.2% (5714 of 8143 lines)
+functions..: 65.1% (549 of 843 functions)
+ branches...: 54.5% (3598 of 6603 branches)
+
 ```cpp
 
 TEST(conflicting_rules)
@@ -102,4 +107,62 @@ struct flx_pool {
 
 }
 
+
+
+public int Helper(TreeNode root, int target){
+	
+	TreeNode up = null;
+	TreeNode down = null;
+
+	while(root != null){
+
+		if(root.val > target){
+			down = root;
+			root = root.left;
+		}else if(root.val < target){
+			up = root;
+			root = root.right;
+		}else{
+
+		}
+	}
+
+	if(Math.abs(up.val - target) > Math.abs(down.val - target)){
+		return down.val;
+	}
+
+	return up.val;
+
+}
+
 ```
+
+
+REPRO:
+* Test environment:
+	Node types:
+	Number of nodes: 1
+	Clients:
+	
+* Test command(s) and/or Manual repro steps:
+	isi network rules create groupnet0.subnet0.pool0.rule22 ext-1 --description 'practice rule 22
+* Actual behavior:
+	error message: rule22 duplicates rule0 on the same interface ext-1"
+* Expected behavior
+	error message: rule22 duplicates rule0 on the same interface ext-1"
+* Test and/or save logs
+	make isi-check OVERRIDE=isilon/lib/isi_flexnet. Total Passed 272. Total Failed: 0. Total Suite Erroes: 0
+* In case of a panic, is node/cluster available for investigation? Please provide details
+
+FACQS:
+Frequency – 
+	How many times have we seen this issue – in this branch: occasionally
+	Is there an existing bug already tracking this? NO
+Availability – Does or can this issue cause DU/DL? If yes, please explain how.
+	No
+Customer Impact – Would fixing this issue improve customer experience and/or avoid an escalation? If yes, please explain how.
+	Yes. The error message will be clearer which will prevent confusion for the customer.
+Quality – Does this fix improve product quality in some way? If yes, please explain how.
+	Yes. Improve the product to more robust. If customers provide same rule, will provide clear error message to the engineer to fix the error.
+Severity – What is the severity of the failure when it occurs?
+	Sev3
